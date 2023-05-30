@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 //TODO: Step 15 - Run the app and see if you can see the screen update with the first story. Delete this TODO if it looks as you expected.
 
-void main() => runApp(Destini());
+void main() => runApp(const Destini());
 
 class Destini extends StatelessWidget {
   const Destini({super.key});
@@ -29,9 +29,11 @@ class _StoryPageState extends State<StoryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        //TODO: Step 1 - Add background.png to this Container as a background image.
         decoration: const BoxDecoration(
-            image: DecorationImage(image: AssetImage('images/background.png'))),
+          image: DecorationImage(
+            image: AssetImage('images/background.png'),
+          ),
+        ),
         padding: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
         constraints: const BoxConstraints.expand(),
         child: SafeArea(
@@ -65,6 +67,7 @@ class _StoryPageState extends State<StoryPage> {
                     'Choice 1',
                     style: TextStyle(
                       fontSize: 20.0,
+                      color: Colors.white,
                     ),
                   ),
                 ),
@@ -82,13 +85,14 @@ class _StoryPageState extends State<StoryPage> {
                     //TODO: Step 19 - Call the nextStory() method from storyBrain and pass the number 2 as the choice made by the user.
                   },
                   style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll(Colors.green),
+                    backgroundColor: MaterialStatePropertyAll(Colors.blue),
                   ),
                   child: const Text(
                     //TODO: Step 14 - Use the storyBrain to get the text for choice 2.
                     'Choice 2',
                     style: TextStyle(
                       fontSize: 20.0,
+                      color: Colors.white,
                     ),
                   ),
                 ),
